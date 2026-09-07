@@ -1,0 +1,38 @@
+{
+  "name": "bot-gestion-ultime-public",
+  "version": "1.0.0",
+  "description": "Édition publique du bot Discord de gestion, sans fonctions d’hébergement de bots.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docs": "node scripts/generate-command-docs.js",
+    "docs:check": "node scripts/generate-command-docs.js --check",
+    "check": "node --check index.js && node --check scripts/generate-command-docs.js && node --check src/bot.js && node --check src/commands/index.js && node --check src/commands/community.js && node --check src/commands/legacy.js && node --check src/commands/advanced.js && node --check src/commands/growth.js && node --check src/commands/multi-bot.js && node --check src/interactions/command-router.js && node --check src/interactions/prefix-router.js && node --check src/modules/advanced-features.js && node --check src/modules/multi-bot-features.js && node --check src/modules/bot-presence.js && node --check src/modules/growth.js && node --check src/modules/guild-access.js && node --check src/modules/help.js && node --check src/modules/interactive-panels.js && node --check src/modules/security.js && node --check src/modules/ticket-config.js && node --check src/modules/ticket-runtime.js && node --check src/modules/ticket-reviews.js && node --check src/modules/community-tools.js && node --check src/modules/discord-automod.js && node --check src/modules/legacy-features.js && node --check src/modules/modmail.js && node --check src/modules/server-events.js && node --check src/modules/voice-guard.js && node --check src/persistence/guild-store.js && npm run check:statistics && node --check src/modules/bot-voice.js",
+    "test": "node tests/commands.test.js && node --test tests/modmail.test.js && node --test tests/tickets.test.js && node --test tests/dire.test.js && node --test tests/annonce.test.js && node --test tests/statistics.test.js && node --test tests/bot-voice.test.js && node --test tests/growth.test.js && node scripts/generate-command-docs.js --check",
+    "test:modmail": "node --test tests/modmail.test.js",
+    "test:tickets": "node --test tests/tickets.test.js",
+    "test:dire": "node --test tests/dire.test.js",
+    "test:annonce": "node --test tests/annonce.test.js",
+    "test:statistics": "node --test tests/statistics.test.js",
+    "test:voice": "node --test tests/bot-voice.test.js",
+    "check:statistics": "node --check src/commands/statistics.js && node --check src/modules/statistics-config.js && node --check src/modules/statistics.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.19.2",
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Y3xoDev/bot-gestion-ultime-public.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Y3xoDev/bot-gestion-ultime-public/issues"
+  },
+  "homepage": "https://github.com/Y3xoDev/bot-gestion-ultime-public#readme"
+}
